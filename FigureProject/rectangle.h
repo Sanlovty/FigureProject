@@ -2,7 +2,6 @@
 #define RECTANGLE_H
 #include "figure_interface.h"
 
-//TODO: реализовать scaler
 //TODO: реализовать проверку, как вирт.функцию
 class Rectangle : public IFigure
 {
