@@ -1,11 +1,26 @@
 #include "rectangle.h"
 
-Rectangle::Rectangle() :
+bool Rectangle::isCorrectFigure_()
+{
+	return leftTop_.first == leftBottom_.first &&
+		leftTop_.second == rightTop_.second &&
+		rightTop_.first == rightBottom_.first &&
+		leftBottom_.second == rightBottom_.second &&
+		leftTop_.second > leftBottom_.second &&
+		rightBottom_.first > leftBottom_.first;
+}
+
+Rectangle::Rectangle()
+	:
 	leftTop_(point_t()),
 	rightTop_(point_t()),
 	rightBottom_(point_t()),
 	leftBottom_(point_t())
 {
+	if (!Rectangle::isCorrectFigure_())
+	{
+		throw exception("Bad rectangle parameters");
+	}
 }
 
 Rectangle::Rectangle(const double& leftTopX,
@@ -21,6 +36,10 @@ Rectangle::Rectangle(const double& leftTopX,
 	rightBottom_(point_t(rightBottomX, rightBottomY)),
 	leftBottom_(point_t(leftBottomX, leftBottomY))
 {
+	if (!Rectangle::isCorrectFigure_())
+	{
+		throw exception("Bad rectangle parameters");
+	}
 }
 
 Rectangle::Rectangle(const point_t& leftTop,
@@ -32,6 +51,10 @@ Rectangle::Rectangle(const point_t& leftTop,
 	rightBottom_(rightBottom),
 	leftBottom_(leftBottom)
 {
+	if (!Rectangle::isCorrectFigure_())
+	{
+		throw exception("Bad rectangle parameters");
+	}
 }
 
 void Rectangle::rotate(const double& angle)

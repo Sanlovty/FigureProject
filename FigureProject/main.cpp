@@ -1,12 +1,19 @@
 #include <iostream>
-#include <cmath>
 #include "rectangle.h"
 
 int main()
 {
-	Rectangle rectangle(0, 10, 10, 10, 0, 10, 0, 0);
+	try
+	{
+		Rectangle rectangle(0, 10, 10, 10, 10, 0, 0, 0);
 
-	rectangle.setWidth(20);
+		return 0;
+	}
+	catch (const exception& ex)
+	{
+		std::cout << "Error: " << ex.what();
+	}
+
 
 	return 0;
 }
