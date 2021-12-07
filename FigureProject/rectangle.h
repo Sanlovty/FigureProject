@@ -26,6 +26,11 @@ public:
 	void setHeight(const double& height);
 	void setWidth(const double& width);
 
+	point_t getLeftTop() const;
+	point_t getRightTop() const;
+	point_t getRightBottom() const;
+	point_t getLeftBottom() const;
+
 	double getHeight() const;
 	double getWidth() const;
 	point_t getCenter() const override;

@@ -90,6 +90,26 @@ void Rectangle::setWidth(const double& width)
 	rightBottom_.first = rightTop_.first = leftBottom_.first + width;
 }
 
+point_t Rectangle::getLeftTop() const
+{
+	return leftTop_;
+}
+
+point_t Rectangle::getRightTop() const
+{
+	return rightTop_;
+}
+
+point_t Rectangle::getRightBottom() const
+{
+	return rightBottom_;
+}
+
+point_t Rectangle::getLeftBottom() const
+{
+	return leftBottom_;
+}
+
 double Rectangle::getHeight() const
 {
 	return abs(leftTop_.second - leftBottom_.second);

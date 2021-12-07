@@ -1,17 +1,43 @@
 #include <iostream>
+#include <conio.h>
+#include "circle.h"
 #include "rectangle.h"
+#include "square.h"
+using std::endl;
+using std::cout;
 
 int main()
 {
 	try
 	{
-		Rectangle rectangle(0, 10, 10, 10, 10, 0, 0, 0);
+		bool isOpen = true;
+		char symbol;
+		while (isOpen)
+		{
+			if (!_kbhit())
+			{
+				system("cls");
+				cout << "Menu:\n 1) Test rectangle class\n 2) Test square class\n 3) Test circle class\n 4) Exit";
+				symbol = _getch();
+				switch (symbol)
+				{
+				case '1':
 
-		return 0;
+					break;
+				case '2':
+					break;
+				case '3':
+					break;
+				case '4':
+					isOpen = false;
+					break;
+				}
+			}
+		}
 	}
 	catch (const exception& ex)
 	{
-		std::cout << "Error: " << ex.what();
+		cout << "Error: " << ex.what();
 	}
 
 
