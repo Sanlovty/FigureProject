@@ -53,10 +53,12 @@ void Rectangle::move(const double& x, const double& y)
 
 void Rectangle::resize(const double& multiplier)
 {
-	if (multiplier == 0.0)
+	if (multiplier <= 0.0)
 	{
-		throw exception("Multiplier must be not null");
+		throw exception("Multiplier must be positive");
 	}
+	setHeight(getHeight() * multiplier);
+	setWidth(getWidth() * multiplier);
 }
 
 void Rectangle::setHeight(const double& height)
@@ -79,12 +81,12 @@ void Rectangle::setWidth(const double& width)
 
 double Rectangle::getHeight() const
 {
-	return abs(leftTop_.first - leftBottom_.first);
+	return abs(leftTop_.second - leftBottom_.second);
 }
 
 double Rectangle::getWidth() const
 {
-	return abs(leftTop_.second - rightTop_.second);
+	return abs(leftTop_.first - rightTop_.first);
 }
 
 point_t Rectangle::getCenter() const
