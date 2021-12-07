@@ -112,12 +112,16 @@ point_t Rectangle::getLeftBottom() const
 
 double Rectangle::getHeight() const
 {
-	return abs(leftTop_.second - leftBottom_.second);
+	return sqrt(
+		(leftTop_.second - leftBottom_.second) * (leftTop_.second - leftBottom_.second)
+		+ (leftTop_.first - leftBottom_.first) * (leftTop_.first - leftBottom_.first));
 }
 
 double Rectangle::getWidth() const
 {
-	return abs(leftTop_.first - rightTop_.first);
+	return sqrt(
+		(leftTop_.second - rightTop_.second) * (leftTop_.second - rightTop_.second)
+		+ (leftTop_.first - rightTop_.first) * (leftTop_.first - rightTop_.first));
 }
 
 point_t Rectangle::getCenter() const
