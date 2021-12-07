@@ -4,6 +4,7 @@
 
 class Rectangle : public IFigure
 {
+protected:
 	point_t leftTop_;
 	point_t rightTop_;
 	point_t rightBottom_;
