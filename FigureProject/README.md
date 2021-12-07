@@ -1,6 +1,6 @@
 # Название репозитория
 ### **Задача:**
-> ![картинка](https://www.cloudsavvyit.com/thumbcache/0/0/5b8ff1fbf94a3ecddbaa8db6b389c09a/p/uploads/2019/10/xe713ed70-1.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.nMHcKVf_oU.png)
+> ![Задание](https://sun9-55.userapi.com/impg/xyc8VPJK82cO8GmO1nPmB6FXg8nCc0zymVXvKQ/SgUkELdokQI.jpg?size=1330x337&quality=96&sign=ab3592b274dbfad9400744b597f4ec9b&type=album)
 
 - пункт 1
 - пункт 2
