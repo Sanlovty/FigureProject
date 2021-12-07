@@ -28,11 +28,11 @@ int main()
 				{
 				case '1':
 					{
-						Rectangle rectangle(0, 30, 30, 30, 30, 0, 0, 0);
-
 						bool isFirstOpen = true;
 						while (isFirstOpen)
 						{
+							Rectangle rectangle(0, 40, 30, 40, 30, 0, 0, 0);
+
 							if (!_kbhit())
 							{
 								system("cls");
@@ -240,11 +240,11 @@ int main()
 					break;
 				case '2':
 					{
-						Square square(0, 30, 30, 30, 30, 0, 0, 0);
-
 						bool isSecondOpen = true;
 						while (isSecondOpen)
 						{
+							Square square(0, 30, 30, 30, 30, 0, 0, 0);
+
 							if (!_kbhit())
 							{
 								system("cls");
@@ -452,11 +452,11 @@ int main()
 					break;
 				case '3':
 					{
-						Circle circle(10, 10, 20);
-
 						bool isThirdOpen = true;
 						while (isThirdOpen)
 						{
+							Circle circle(10, 10, 20);
+
 							if (!_kbhit())
 							{
 								system("cls");
@@ -472,8 +472,8 @@ int main()
 										double xMove, yMove;
 										cout << "Coordinates of circle before move: ("
 											<< center_.first << ":" << center_.second << ")" << endl << "Radius: " <<
-											//circle.getRadius() << endl;
-											cout << "Enter X move: ";
+											circle.getRadius() << endl;
+										cout << "Enter X move: ";
 										cin >> xMove;
 										cout << "Enter Y move: ";
 										cin >> yMove;
@@ -522,7 +522,7 @@ int main()
 										system("cls");
 										point_t center_ = circle.getCenter();
 										double radius;
-										cout << "Radius of circle before setRadius: " <<
+										cout << "Radius of circle before setRadius:" <<
 											circle.getRadius() << endl;
 										cout << "Enter RADIUS in degree: ";
 										cin >> radius;
