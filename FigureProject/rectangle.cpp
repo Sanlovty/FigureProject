@@ -10,18 +10,6 @@ bool Rectangle::isCorrectFigure_()
 		rightBottom_.first > leftBottom_.first;
 }
 
-Rectangle::Rectangle()
-	:
-	leftTop_(point_t()),
-	rightTop_(point_t()),
-	rightBottom_(point_t()),
-	leftBottom_(point_t())
-{
-	if (!Rectangle::isCorrectFigure_())
-	{
-		throw exception("Bad rectangle parameters");
-	}
-}
 
 Rectangle::Rectangle(const double& leftTopX,
                      const double& leftTopY,

@@ -11,13 +11,6 @@ bool Square::isCorrectFigure_()
 		getHeight() == getWidth();
 }
 
-Square::Square() : Rectangle()
-{
-	if (!Square::isCorrectFigure_())
-	{
-		throw exception("Bad square parameters");
-	}
-}
 
 Square::Square(const double& leftTopX,
                const double& leftTopY,

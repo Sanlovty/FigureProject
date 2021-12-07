@@ -4,9 +4,9 @@
 
 class Square : public Rectangle
 {
+protected:
 	bool isCorrectFigure_() override;
 public:
-	Square();
 	Square(const double& leftTopX, const double& leftTopY,
 	       const double& rightTopX, const double& rightTopY,
 	       const double& rightBottomX, const double& rightBottomY,

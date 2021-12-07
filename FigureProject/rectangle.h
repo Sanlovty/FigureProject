@@ -12,7 +12,6 @@ protected:
 
 	bool isCorrectFigure_() override;
 public:
-	Rectangle();
 	Rectangle(const double& leftTopX, const double& leftTopY,
 	          const double& rightTopX, const double& rightTopY,
 	          const double& rightBottomX, const double& rightBottomY,
