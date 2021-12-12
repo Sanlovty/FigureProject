@@ -1,16 +1,15 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#include "figure_interface.h"
+#include "header.h"
 
-class Rectangle : public IFigure
+class Rectangle
 {
-protected:
 	point_t leftTop_;
 	point_t rightTop_;
 	point_t rightBottom_;
 	point_t leftBottom_;
 
-	bool isCorrectFigure_() override;
+	bool isCorrectFigure_() const;
 public:
 	Rectangle(const double& leftTopX, const double& leftTopY,
 	          const double& rightTopX, const double& rightTopY,
@@ -19,9 +18,9 @@ public:
 	Rectangle(const point_t& leftTop, const point_t& rightTop,
 	          const point_t& rightBottom, const point_t& leftBottom);
 
-	void rotate(const double& angle) override;
-	void move(const double& x, const double& y) override;
-	void resize(const double& multiplier) override;
+	void rotate(const double& angle);
+	void move(const double& x, const double& y);
+	void resize(const double& multiplier);
 
 	void setHeight(const double& height);
 	void setWidth(const double& width);
@@ -33,7 +32,7 @@ public:
 
 	double getHeight() const;
 	double getWidth() const;
-	point_t getCenter() const override;
+	point_t getCenter() const;
 };
 
 #endif

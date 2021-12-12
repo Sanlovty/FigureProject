@@ -1,6 +1,7 @@
 #include "rectangle.h"
 
-bool Rectangle::isCorrectFigure_()
+
+bool Rectangle::isCorrectFigure_() const
 {
 	return leftTop_.first == leftBottom_.first &&
 		leftTop_.second == rightTop_.second &&
@@ -24,7 +25,7 @@ Rectangle::Rectangle(const double& leftTopX,
 	rightBottom_(point_t(rightBottomX, rightBottomY)),
 	leftBottom_(point_t(leftBottomX, leftBottomY))
 {
-	if (!Rectangle::isCorrectFigure_())
+	if (!isCorrectFigure_())
 	{
 		throw exception("Bad rectangle parameters");
 	}
@@ -39,7 +40,7 @@ Rectangle::Rectangle(const point_t& leftTop,
 	rightBottom_(rightBottom),
 	leftBottom_(leftBottom)
 {
-	if (!Rectangle::isCorrectFigure_())
+	if (!isCorrectFigure_())
 	{
 		throw exception("Bad rectangle parameters");
 	}

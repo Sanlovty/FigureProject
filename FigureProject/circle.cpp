@@ -1,10 +1,7 @@
 #include "circle.h"
 
-void Circle::rotate(const double& angle)
-{
-}
 
-bool Circle::isCorrectFigure_()
+bool Circle::isCorrectFigure_() const
 {
 	return radius_ >= 0.0;
 }

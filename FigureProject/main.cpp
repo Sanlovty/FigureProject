@@ -9,7 +9,6 @@ using std::endl;
 using std::cout;
 using std::cin;
 using std::fixed;
-using std::setw;
 
 int main()
 {

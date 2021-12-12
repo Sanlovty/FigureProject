@@ -1,25 +1,24 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
-#include "figure_interface.h"
+#include "header.h"
 
-class Circle : public IFigure
+class Circle
 {
 protected:
 	double radius_;
 	point_t center_;
 
-	void rotate(const double& angle) override;
-	bool isCorrectFigure_() override;
+	bool isCorrectFigure_() const;
 public:
 	Circle(const double& x, const double& y, const double& radius);
 	Circle(const point_t& center, const double& radius);
 
 
-	void move(const double& x, const double& y) override;
-	void resize(const double& multiplier) override;
+	void move(const double& x, const double& y);
+	void resize(const double& multiplier);
 
 	void setRadius(const double& radius);
-	point_t getCenter() const override;
+	point_t getCenter() const;
 	double getRadius() const;
 };
 
